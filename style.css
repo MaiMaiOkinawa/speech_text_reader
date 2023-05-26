@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Muli', sans-serif;
+    background: #ffefea;
+    min-height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    margin: auto;
+    padding: 20px;
+}
+
+.btn {
+    cursor: pointer;
+    background-color: darksalmon;
+    border: 0;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn:focus,
+select:focus,
+textarea:focus {
+    outline: 0;
+}
+
+/* Set btn-toggle in the middle */
+.btn-toggle {
+    display: block;
+    margin: auto;
+    margin-bottom: 1.25rem;
+}
+
+.text-box {
+    width: 70%;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-800px);
+    background-color: #333;
+    color: #fff;
+    padding: 1.25rem;
+    border-radius: 5px;
+    transition: all 1s ease-in-out;
+}
+
+.text-box.show {
+    transform: translate(-50%,0);
+}
+
+.text-box select {
+    background-color: darksalmon;
+    border: none;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 0.75em;
+    height: 30px;
+    width: 100%;
+}
+
+.text-box textarea {
+    border: 1px #dadada solid;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+    padding: 0.75rem;
+    margin: 15px 0;
+    width: 100%;
+    height: 150px;
+}
+
+.text-box button {
+    width: 100%;
+}
+
+.close i {
+    float: right;
+    text-align: right;
+    cursor: pointer;
+}
+
+/* 
+<-- float -->
+https://developer.mozilla.org/en-US/docs/Web/CSS/float
+*/
+
+main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.625rem;
+}
+
+.box {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: box-shadow 0.2s ease-out;
+  }
+  
+.box.active {
+    box-shadow: 0 0 10px 5px darksalmon;
+  }
+
+.box img {
+    width: 100%;
+    height: 12.5rem;
+    object-fit: cover;
+}
+
+.box .info {
+    background-color: darksalmon;
+    color: #fff;
+    font-size: 1.125rem;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 10px;
+    height: 100%;
+}
+
+@media (max-width: 1100px) {
+    main {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 760px) {
+    main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+}

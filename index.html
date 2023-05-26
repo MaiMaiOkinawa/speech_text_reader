@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Speech Text Reader</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Speach Text Reader</h1>
+        <button id="toggle" class="btn btn-toggle">
+            Toggle Text Box
+        </button>
+        <div class="text-box" id="text-box">
+            <div class="close" id="close">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+                <h3>Choose Voice</h3>
+                <select id="voices"></select>
+                <textarea id="text" placeholder="Enter text to read..."></textarea>
+                <button class="btn" id="read">Read Text</button>
+        </div>
+        <main></main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
