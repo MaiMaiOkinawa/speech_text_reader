@@ -103,7 +103,7 @@ function getVoices() {
     const option = document.createElement('option');
 
     option.value = voice.name;
-    option.innerText = `${voice.name} ${voice.long}`;
+    option.innerText = `${voice.name} ${voice.lang}`;
 
     voicesSelect.appendChild(option);
   });
